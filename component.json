@@ -1,0 +1,13 @@
+{
+  "name": "observer",
+  "repo": "anrim/observer",
+  "description": "Observer pattern. Allows a subject to publish updates to a group of observers.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
