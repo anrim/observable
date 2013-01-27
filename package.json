@@ -1,12 +1,12 @@
 {
-  "name": "observer",
+  "name": "observer-component",
   "version": "0.0.1",
   "description": "Observer pattern. Allows a subject to publish updates to a group of observers.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "repository": "",
+  "repository": "https://github.com/anrim/observer-component.git",
   "author": "anrim",
   "license": "MIT"
 }
