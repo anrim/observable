@@ -1,6 +1,6 @@
 {
   "name": "observer",
-  "repo": "anrim/observer",
+  "repo": "anrim/observer-component",
   "description": "Observer pattern. Allows a subject to publish updates to a group of observers.",
   "version": "0.0.1",
   "keywords": [],

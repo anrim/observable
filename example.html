@@ -14,9 +14,20 @@
 <body>
   <script type="text/javascript" charset="utf-8">
     var Observer = require('observer');
-    for (var i in Observer) {
-      console.log(i);
-    }
+    
+    var publisher1 = Object.create(Observer);
+    var publisher2 = Object.create(Observer);
+    
+    publisher1.on('event', function (s){
+      console.log(s);
+    });
+    
+    publisher2.on('event', function (s){
+      console.log(s);
+    });
+    
+    publisher1.trigger('event', 'publisher1');
+    publisher2.trigger('event', 'publisher2');
   </script>
 </body>
 </html>
