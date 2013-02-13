@@ -61,7 +61,7 @@ Observer.trigger = function (event) {
   this.callbacks[event] = this.callbacks[event] || [];
   this.callbacks[event].forEach(function (callback) {
     callback.apply(this, args);
-  });
+  }, this);
   
   return this;
 }
