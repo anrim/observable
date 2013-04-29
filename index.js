@@ -20,11 +20,8 @@ Observer.on = function (event, callback) {
     throw new Error('Observer.on callback is required');
   }
   
-  if (!(event in this.callbacks)) {
-    this.callbacks[event] = [];
-  }
+  this.bind(event, callback);
   
-  this.callbacks[event].push(callback);
   return this;
 }
 
@@ -33,6 +30,20 @@ Observer.off = function (event, callback) {
     throw new Error('Observer.off event is required');
   }
   
+  this.unbind(event, callback);
+  
+  return this;
+}
+
+Observer.bind = function (event, callback) {
+  if (!(event in this.callbacks)) {
+    this.callbacks[event] = [];
+  }
+  
+  this.callbacks[event].push(callback);
+}
+
+Observer.unbind = function (event, callback) {
   // remove all
   if (typeof callback === "undefined") {
     delete this.callbacks[event];
@@ -43,8 +54,6 @@ Observer.off = function (event, callback) {
       this.callback[event].splice(i, 1);
     }
   }
-  
-  return this;
 }
 
 Observer.once = function (event,callback) {
